@@ -1,0 +1,14 @@
+#camera number
+0
+#camera resolution pixel (W)
+1920
+#camera resolution pixel (W)
+1080
+#screen resolution pixel (H)1920
+1920
+#screen resolution pixel (H)1080
+1080
+#distance lower limit (200)
+200
+#distance upper limit (500)
+500
