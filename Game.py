@@ -48,7 +48,7 @@ Speed = 5
 fruit_N = 0
 Max_fruit = 5
 FPS=60
-gap=350
+gap = WIDTH//5.5
 
 #load img files
 
@@ -104,7 +104,7 @@ pygame.mixer.music.set_volume(0.4)
 class Game_button(pygame.sprite.Sprite):
     def __init__(self):
         pygame.sprite.Sprite.__init__(self)
-        self.image = pygame.transform.scale(Game_button_ico_img, (300,150))
+        self.image = pygame.transform.scale(Game_button_ico_img, (WIDTH/6.4,HEIGHT/7.2))
         self.image.set_colorkey((0,0,0))
         self.rect = self.image.get_rect()
         self.rect.center = (WIDTH/2 - gap*1.5 ,HEIGHT/2)
@@ -112,7 +112,7 @@ class Game_button(pygame.sprite.Sprite):
 class Setting_button(pygame.sprite.Sprite):
     def __init__(self):
         pygame.sprite.Sprite.__init__(self)
-        self.image = pygame.transform.scale(Setting_button_ico_img, (300,150))
+        self.image = pygame.transform.scale(Setting_button_ico_img, (WIDTH/6.4,HEIGHT/7.2))
         self.image.set_colorkey((0,0,0))
         self.rect = self.image.get_rect()
         self.rect.center = (WIDTH/2 - gap*0.5 ,HEIGHT/2)
@@ -120,7 +120,7 @@ class Setting_button(pygame.sprite.Sprite):
 class Rank_button(pygame.sprite.Sprite):
     def __init__(self):
         pygame.sprite.Sprite.__init__(self)
-        self.image = pygame.transform.scale(Rank_button_ico_img, (300,150))
+        self.image = pygame.transform.scale(Rank_button_ico_img, (WIDTH/6.4,HEIGHT/7.2))
         self.image.set_colorkey((0,0,0))
         self.rect = self.image.get_rect()
         self.rect.center = (WIDTH/2 + gap*0.5,HEIGHT/2)
@@ -128,7 +128,7 @@ class Rank_button(pygame.sprite.Sprite):
 class Exit_button(pygame.sprite.Sprite):
     def __init__(self):
         pygame.sprite.Sprite.__init__(self)
-        self.image = pygame.transform.scale(Exit_button_ico_img, (300,150))
+        self.image = pygame.transform.scale(Exit_button_ico_img, (WIDTH/6.4,HEIGHT/7.2))
         self.image.set_colorkey((0,0,0))
         self.rect = self.image.get_rect()
         self.rect.center = (WIDTH/2 + gap*1.5 ,HEIGHT/2)
@@ -136,7 +136,7 @@ class Exit_button(pygame.sprite.Sprite):
 class Save_button(pygame.sprite.Sprite):
     def __init__(self):
         pygame.sprite.Sprite.__init__(self)
-        self.image = pygame.transform.scale(Back_button_ico_img, (300,150))
+        self.image = pygame.transform.scale(Back_button_ico_img, (WIDTH/6.4,HEIGHT/7.2))
         self.image.set_colorkey((0,0,0))
         self.rect = self.image.get_rect()
         self.rect.center = (WIDTH/2 + gap*2 ,HEIGHT/2 - 200)
@@ -144,41 +144,41 @@ class Save_button(pygame.sprite.Sprite):
 class Back_button(pygame.sprite.Sprite):
     def __init__(self):
         pygame.sprite.Sprite.__init__(self)
-        self.image = pygame.transform.scale(Back_button_ico_img, (300,150))
+        self.image = pygame.transform.scale(Back_button_ico_img, (WIDTH/6.4,HEIGHT/7.2))
         self.image.set_colorkey((0,0,0))
         self.rect = self.image.get_rect()
-        self.rect.center = (WIDTH/2 + 400 *1.5 ,HEIGHT/2 - 200)
+        self.rect.center = (WIDTH/2 + (gap+50) *1.5 ,HEIGHT/2 - 200)
      
 class Game1_button(pygame.sprite.Sprite):
     def __init__(self):
         pygame.sprite.Sprite.__init__(self)
-        self.image = pygame.transform.scale(Game1_button_ico_img, (300,150))
+        self.image = pygame.transform.scale(Game1_button_ico_img, (WIDTH/6.4,HEIGHT/7.2))
         self.image.set_colorkey((0,0,0))
         self.rect = self.image.get_rect()
-        self.rect.center = (WIDTH/2 - 400 *1.5 ,HEIGHT/2-200)
+        self.rect.center = (WIDTH/2 - (gap+50) *1.5 ,HEIGHT/2-200)
         
 class Game2_button(pygame.sprite.Sprite):
     def __init__(self):
         pygame.sprite.Sprite.__init__(self)
-        self.image = pygame.transform.scale(Game2_button_ico_img, (300,150))
+        self.image = pygame.transform.scale(Game2_button_ico_img, (WIDTH/6.4,HEIGHT/7.2))
         self.image.set_colorkey((0,0,0))
         self.rect = self.image.get_rect()
-        self.rect.center = (WIDTH/2 - 400 *0.5,HEIGHT/2-200)
+        self.rect.center = (WIDTH/2 - (gap+50) *0.5,HEIGHT/2-200)
         
 class Game3_button(pygame.sprite.Sprite):
     def __init__(self):
         pygame.sprite.Sprite.__init__(self)
-        self.image = pygame.transform.scale(Game3_button_ico_img, (300,150))
+        self.image = pygame.transform.scale(Game3_button_ico_img, (WIDTH/6.4,HEIGHT/7.2))
         self.image.set_colorkey((0,0,0))
         self.rect = self.image.get_rect()
-        self.rect.center = (WIDTH/2 + 400 *0.5 ,HEIGHT/2-200)
+        self.rect.center = (WIDTH/2 + (gap+50) *0.5 ,HEIGHT/2-200)
         
 # build order sprite(in game3)
 class order_1(pygame.sprite.Sprite):
     
     def __init__(self):
         pygame.sprite.Sprite.__init__(self)
-        self.image = pygame.transform.scale(order_1_img, (100,100))
+        self.image = pygame.transform.scale(order_1_img, (HEIGHT/10.8,HEIGHT/10.8))
         self.image.set_colorkey((0,0,0))
         self.rect = self.image.get_rect()
         self.rect.center = (Order_XY_list[0][0]*100 ,Order_XY_list[0][1]*100)
@@ -190,7 +190,7 @@ class order_2(pygame.sprite.Sprite):
     
     def __init__(self):
         pygame.sprite.Sprite.__init__(self)
-        self.image = pygame.transform.scale(order_2_img, (100,100))
+        self.image = pygame.transform.scale(order_2_img, (HEIGHT/10.8,HEIGHT/10.8))
         self.image.set_colorkey((0,0,0))
         self.rect = self.image.get_rect()
         self.rect.center = (Order_XY_list[1][0]*100 ,Order_XY_list[1][1]*100)
@@ -202,7 +202,7 @@ class order_3(pygame.sprite.Sprite):
     
     def __init__(self):
         pygame.sprite.Sprite.__init__(self)
-        self.image = pygame.transform.scale(order_3_img, (100,100))
+        self.image = pygame.transform.scale(order_3_img, (HEIGHT/10.8,HEIGHT/10.8))
         self.image.set_colorkey((0,0,0))
         self.rect = self.image.get_rect()
         self.rect.center = (Order_XY_list[2][0]*100 ,Order_XY_list[2][1]*100)
@@ -214,7 +214,7 @@ class order_4(pygame.sprite.Sprite):
     
     def __init__(self):
         pygame.sprite.Sprite.__init__(self)
-        self.image = pygame.transform.scale(order_4_img, (100,100))
+        self.image = pygame.transform.scale(order_4_img, (HEIGHT/10.8,HEIGHT/10.8))
         self.image.set_colorkey((0,0,0))
         self.rect = self.image.get_rect()
         self.rect.center = (Order_XY_list[3][0]*100 ,Order_XY_list[3][1]*100)
@@ -226,7 +226,7 @@ class order_5(pygame.sprite.Sprite):
     
     def __init__(self):
         pygame.sprite.Sprite.__init__(self)
-        self.image = pygame.transform.scale(order_5_img, (100,100))
+        self.image = pygame.transform.scale(order_5_img, (HEIGHT/10.8,HEIGHT/10.8))
         self.image.set_colorkey((0,0,0))
         self.rect = self.image.get_rect()
         self.rect.center = (Order_XY_list[4][0]*100 ,Order_XY_list[4][1]*100)
@@ -238,7 +238,7 @@ class order_6(pygame.sprite.Sprite):
     
     def __init__(self):
         pygame.sprite.Sprite.__init__(self)
-        self.image = pygame.transform.scale(order_6_img, (100,100))
+        self.image = pygame.transform.scale(order_6_img, (HEIGHT/10.8,HEIGHT/10.8))
         self.image.set_colorkey((0,0,0))
         self.rect = self.image.get_rect()
         self.rect.center = (Order_XY_list[5][0]*100 ,Order_XY_list[5][1]*100)
@@ -345,7 +345,7 @@ class Gophers(pygame.sprite.Sprite):
             self.image = pygame.transform.scale(Gophers_img, (90,150)) 
         self.image.set_colorkey((0,0,0))
         
-        if self.Gophers_Y >=220:
+        if self.Gophers_Y >=200:
             self.Gophers_Y = 70
             self.hole_n = random.randrange(0,7)
             self.boom = random.randrange(0,boom_rate) == 1
@@ -362,7 +362,7 @@ class Gophers(pygame.sprite.Sprite):
         self.Gophers_Y = 0
         self.hole_n = random.randrange(0,6)
         self.boom = random.randrange(0,boom_rate) == 1
-
+#build group
 Body_Group =  pygame.sprite.Group()
 Hand_Group =  pygame.sprite.Group()
 Bug_Group =  pygame.sprite.Group()
@@ -398,7 +398,7 @@ Gophers = Gophers()
 hand_L = hand_L()
 hand_R = hand_R()
 Bugs = Bug()
-
+#add in group
 Hand_Group.add(hand_L)
 Hand_Group.add(hand_R)
 
@@ -423,7 +423,7 @@ Save_button_Group.add(Save_button)
 Bug_Group.add(Bugs)
 Mouse_Group.add(Mouse)
 Gophers_Group.add(Gophers)
-
+#random (x,y) in game 3 
 def random_order():
     rand_XY_list=[]
     rand_XY=[]
@@ -434,18 +434,20 @@ def random_order():
         rand_XY_list.append(rand_XY)
     return rand_XY_list
         
-def find_pose_landmark():
+#find_pose_landmark
+def find_pose_landmark(wS=1920,hS=1080, wC=1920,hC=1080):
     Pose_lm=[]
     if  results.pose_landmarks:
         for id , lm in enumerate(results.pose_landmarks.landmark):
             h, w, c = img.shape
-            Pose_lm.append([int(lm.x*w),int(lm.y*h)])
+            Pose_lm.append([int(lm.x*w* wS/wC),int(lm.y*h* hS/hC)])
     return Pose_lm
+
 
 def area(p1,p2,p3):
     area = abs((p2[0]-p1[0])*(p3[1]-p1[1])-(p2[1]-p1[1])*(p3[0]-p1[0]))/2
     return area
-
+#Game 1
 def Game1():
     Hand_Group.update()
     Bug_Group.update()
@@ -458,7 +460,7 @@ def Game1():
         return 10
     else :
         return 0
-    
+#Game 2
 def Game2():
     Hand_Group.update()
     s = Gophers.update()
@@ -476,7 +478,7 @@ def Game2():
     else :
         return 0
     
-
+#return hit order number 
 def order_hit():
     if pygame.sprite.collide_rect(order_1,hand_L) or pygame.sprite.collide_rect(order_1,hand_R):
         Order_XY_list[0]=[-3,0]
@@ -504,28 +506,30 @@ def order_hit():
         return 6
     else :
         return 0
-    
+#return player distance
 def distance(P1,P2):
     #d = area(Pose_LM[11],Pose_LM[12],Pose_LM[24])
     d = int(math.hypot(Pose_LM[P1][0] - Pose_LM[P2][0], Pose_LM[P1][1] - Pose_LM[P2][1]))
     if d < distance_limit[0]:
         #print(str(d)+" Too Far")
-        draw_text(screen,"Too Far " + str(d),40,WIDTH/2 -350,10,[255,50,0])
+        draw_text(screen,"Too Far " + str(d),HEIGHT//27,WIDTH/2 -gap,10,[255,50,0])
         return False
     elif d > distance_limit[1]:
         #print(str(d)+" Too Colse")
-        draw_text(screen,"Too Close "+ str(d),40,WIDTH/2 -350,10,[255,50,0])
+        draw_text(screen,"Too Close "+ str(d),HEIGHT//27,WIDTH/2 -gap,10,[255,50,0])
         return False
     else :
         #print(str(d)+" Okay")
-        draw_text(screen,"Okay "+ str(d),40,WIDTH/2 -350,10,[100,255,0])
+        draw_text(screen,"Okay "+ str(d),HEIGHT//27,WIDTH/2 -gap,10,[100,255,0])
         return True
     
+#add new bug
 def new_Bug():
     R = Bug()
     Bug_Group.empty()
     Bug_Group.add(R)
     
+#draw text on screen
 def draw_text(surf, text, size, x, y, color):
     font = pygame.font.Font(font_name, size)
     text_surface = font.render(text, True,(color[0],color[1],color[2]))
@@ -533,7 +537,8 @@ def draw_text(surf, text, size, x, y, color):
     text_rect.centerx = x
     text_rect.top = y
     surf.blit(text_surface, text_rect)
-    
+
+#select menu    
 def select_Menu():
     if len(Hand_LM) != 0:
         #print(Hand_LM)
@@ -556,6 +561,7 @@ def select_Menu():
     Mouse_Group.draw(screen)
     return 0
 
+#select Game
 def select_Game():
     if len(Hand_LM) != 0:
         if fingers_pose == 7 or fingers_pose == 1:
@@ -577,11 +583,13 @@ def select_Game():
     Mouse_Group.draw(screen)
     return 0
 
+#save Game Score record
 def save_record(Game,score,T,S):
     f = open(Score_Record, 'a')
     f.write(time.ctime(time.time())[4:] +'  ' +Game + '  Score:' + str(score) +' T:'+str(T) +' S:'+str(S) +'\n')
     f.close()
 
+#print Game Score record
 def print_record():
     
     f = open(Score_Record,'r')
@@ -590,11 +598,12 @@ def print_record():
     for i in range (len(record)):
         if i < 21 :
             record[i] = record[i].strip()
-            draw_text(screen, record[i], 30 , WIDTH/2,  i * 40 + 150 , [255,255,255] )
+            draw_text(screen, record[i], HEIGHT//36 , WIDTH/2,  i * 40 + 150 , [255,255,255] )
         else :
             break
     f.close()
     
+#update setting    
 f = open(Setting_Record,'r')
 setting_list = f.readlines()
 f.close()
@@ -606,16 +615,20 @@ laxt_X_Speed = int(np.interp(Speed,[30,300],[460,1460]))
 
 pygame.mixer.music.play(-1)
 
+#Main code
 while runing:
+    
     clock.tick(FPS)#最多60fps
     success, img = cap.read()
     img = cv2.flip(img, 1)#圖片反轉
+    
     imgRGB = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
-    results = pose.process(imgRGB)
     camshot = pygame.image.frombuffer(imgRGB.tostring(), (wCam,hCam), "RGB")
-    Pose_LM = find_pose_landmark()
+    camshot = pygame.transform.scale(camshot, (WIDTH,HEIGHT))
+    results = pose.process(imgRGB)
+    Pose_LM = find_pose_landmark(wS=WIDTH ,hS=HEIGHT, wC=wCam,hC=hCam)
     img_hand_detector = detector.findHands(img,draw = False)
-    Hand_LM, bbox = detector.findPosition(img_hand_detector)
+    Hand_LM, bbox = detector.findPosition(img_hand_detector, wS=WIDTH ,hS=HEIGHT, wC=wCam,hC=hCam)
     screen.blit(camshot, (0,0))
     screen.blit(ScoreBoard_img, (WIDTH/2-600, 10))
     
@@ -628,6 +641,7 @@ while runing:
         mouse_xy[0],mouse_xy[1]= Hand_LM[9][0],Hand_LM[9][1]
         hand_area = area(Hand_LM[0],Hand_LM[5],Hand_LM[17])
         #print(hand_area)
+        
         if fingers_pose == 7 or fingers_pose == 1:
             click = True
         else :
@@ -694,7 +708,7 @@ while runing:
     if Game_Mode == 1:
         if distance_goal :
             Score += Game1()
-        draw_text(screen,'Left Time : ' + str(Play_time - int(time.time() - Game_time)), 40, WIDTH/2 + 300, 10,[255,0,0])
+        draw_text(screen,'Time : ' + str(Play_time - int(time.time() - Game_time)), HEIGHT//27, WIDTH/2 + gap, 10,[255,0,0])
         if time.time() - Game_time > Play_time:
             Game_Mode = 0 
             Menu_state = 0
@@ -704,7 +718,7 @@ while runing:
     elif Game_Mode == 2 :
         if distance_goal :
             Score += Game2()
-        draw_text(screen,'Left Time : ' + str(Play_time - int(time.time() - Game_time)), 40, WIDTH/2 + 300, 10,[255,0,0])
+        draw_text(screen,'Time : ' + str(Play_time - int(time.time() - Game_time)), HEIGHT//27, WIDTH/2 + gap, 10,[255,0,0])
         if time.time() - Game_time > Play_time:
             Game_Mode = 0 
             Menu_state = 0
@@ -726,7 +740,7 @@ while runing:
             N_order = order_hit()
         if N_order != 0 and N_order not in order_list:
             order_list.append(N_order)
-        draw_text(screen,'Left Time : ' + str(Play_time - int(time.time() - Game_time)), 40, WIDTH/2 + 300, 10,[255,0,0])
+        draw_text(screen,'Time : ' + str(Play_time - int(time.time() - Game_time)), HEIGHT//27, WIDTH/2 + gap, 10,[255,0,0])
         Hand_Group.update()
         Order_Group.update()
         Order_Group.draw(screen)
